@@ -1,0 +1,24 @@
+syntax = "proto3";
+package earth.mumbai.mumbai;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/earth/mumbai/x/mumbai/types";
+import "mumbai/schema.proto";
+
+// Msg defines the Msg service.
+service Msg {
+    // this line is used by starport scaffolding # proto/tx/rpc
+    rpc CreateSchema(MsgCreateSchema) returns (MsgCreateSchemaResponse);
+}
+
+message MsgCreateSchema {
+    string creator = 1;
+    Schema schema = 2;
+}
+
+message MsgCreateSchemaResponse {
+    uint64 id = 1;
+}
+
+// this line is used by starport scaffolding # proto/tx/message

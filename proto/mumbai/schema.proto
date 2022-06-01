@@ -1,0 +1,18 @@
+syntax = "proto3";
+package earth.mumbai.mumbai;
+
+option go_package = "github.com/earth/mumbai/x/mumbai/types";
+
+message Schema {
+    string authored = 1;
+    SchemaProperty schema = 2;   
+}
+
+message SchemaProperty {
+    map<string, Property> properties = 1;
+}
+
+message Property {
+    string type = 1;
+    string format = 2;
+}
