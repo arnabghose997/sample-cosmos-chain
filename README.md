@@ -6,6 +6,12 @@ The chain has been scaffolded using the following command:
 ignite scaffold chain github.com/earth/mumbai
 ```
 
+Build the chain:
+
+```
+ignite chain build
+```
+
 To execute custom module's sample transaction (`MsgCreateSchema`):
 
 ```
